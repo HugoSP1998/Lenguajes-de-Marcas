@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <meta name="author" content="Hugo_Suarez">
+</head>
+<body>
+    <h2 style="text-align:center;">Hugo Suárez Pérez</h2>
+
+    <form action="recorrer/recorrer.php" method="post">
+
+        <fieldset>
+            <legend>Datos personales</legend>
+            
+            <label for="dni">DNI</label>
+            <input type="text" id="dni" name="dni" pattern="[0-9]{8}[A-Za-z]{1}" maxlength="9" required>
+
+            <br><br>
+
+            <label for="nom">Nombre</label>
+            <input type="text" id="nom" name="nom" maxlength="20" required>
+
+            <br><br>
+        
+            <label for="ape1">Apellido 1</label>
+            <input type="text" id="ape1" name="ape1" maxlength="20" required>
+
+            <br><br>
+
+            <label for="ape2">Apellido 2</label>
+            <input type="text" id="ape2" name="ape2" maxlength="20">
+
+            <br><br>
+
+            <label for="dir">Dirección</label>
+            <input type="text" id="dir" name="dir" maxlength="128">
+
+            <br><br>
+
+            <label for="CP">Cod.Postal</label>
+            <input type="number" id="CP" name="CP" maxlength="5">
+
+            <br><br>
+
+            <label for="pob">Población</label>
+            <input type="text" id="pob" name="pob" maxlength="64">
+
+            <br><br>
+
+            <label for="provincia">Provincia</label>
+            <select name="provincia" id="provincia">
+                <option value="valencia">VALENCIA</option>
+                <option value="sevilla" selected>SEVILLA</option>
+                <option value="cadiz">CADIZ</option>
+                <option value="malaga">MALAGA</option>
+            </select>
+
+            <br><br>
+
+            <label for="nacimiento">Fecha Nacimiento</label>
+            <input type="date" id="nacimiento" name="nacimiento">
+
+            <br><br>
+
+            <label for="sexo">Sexo</label>
+            <select name="sexo" id="sexo">
+                <option value="mujer">Mujer</option>
+                <option value="hombre">Hombre</option>
+                <option value="otros">Otros</option>
+            </select>
+
+            <br><br>
+
+            <label for="tel">Telefono</label>
+            <input type="tel" id="tel" name="tel" maxlength="9">
+
+            <br><br>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" maxlength="64">
+
+            <br><br>
+
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Formacion y Experiencia</legend>
+
+            <label for="estudios">Estudios cursados</label>
+            <select name="estudios" id="estudios">
+                <option value="medio">CICLO GRADO MEDIO</option>
+                <option value="superior">CICLO GRADO SUPERIOR</option>
+                <option value="bach">BACHILLERATO</option>
+            </select>
+
+            <br><br>
+
+            <label for="titulo">Titulo</label>
+            <input type="text" id="titulo" name="titulo" maxlength="64">
+
+            <br><br>
+
+            <label for="experiencia">Experiencia laboral</label>
+            <input type="radio" name="experiencia" value="SI" id="SI">
+            <label for="SI">SI</label>
+            <input type="radio" name="experiencia" value="NO" id="NO">
+            <label for="NO">NO</label>
+            
+            <br><br>
+
+            <label for="leng">Idiomas</label>
+            <select multiple name="leng" id="leng">
+                <option value="espanol">ESPAÑOL</option>
+                <option value="ingles">INGLES</option>
+                <option value="frances">FRANCES</option>
+                <option value="otros">OTROS</option>
+            </select>
+
+            <label for="otros">Otros:</label>
+            <textarea name="otros" id="otros" cols="60" rows="10"></textarea>
+
+            <br><br>
+
+            <label for="CV">Curriculum</label>
+            <input type="file" id="CV" name="CV">
+
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Acceso al portal</legend>
+
+            <label for="usuario">Usuario</label>
+            <input type="text" id="usuario" name="usuario" maxlength="9">
+
+            <br><br>
+
+            <label for="pass">Password</label>
+            <input type="password" id="pass" name="pass" maxlength="9">
+
+        </fieldset>
+
+        <label for="datos">Otros datos</label>
+        <textarea name="datos" id="datos" cols="80" rows="10"></textarea>
+    
+        <br><br>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Borrar">
+    </form>
+</body>
+</html>
